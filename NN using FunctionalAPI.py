@@ -42,6 +42,50 @@ model.compile(
 # Fitting the model with Data
 
 model.fit(x_train, y_train, batch_size=32, epochs=10, verbose=2)
+"""
+Epoch 1/10
+1875/1875 - 6s - loss: 1.5733 - accuracy: 0.8906
+Epoch 2/10
+1875/1875 - 6s - loss: 1.5057 - accuracy: 0.9560
+Epoch 3/10
+1875/1875 - 6s - loss: 1.4987 - accuracy: 0.9625
+Epoch 4/10
+1875/1875 - 6s - loss: 1.4935 - accuracy: 0.9677
+Epoch 5/10
+1875/1875 - 6s - loss: 1.4916 - accuracy: 0.9696
+Epoch 6/10
+1875/1875 - 6s - loss: 1.4899 - accuracy: 0.9711
+Epoch 7/10
+1875/1875 - 6s - loss: 1.4884 - accuracy: 0.9727
+Epoch 8/10
+1875/1875 - 6s - loss: 1.4909 - accuracy: 0.9702
+Epoch 9/10
+1875/1875 - 6s - loss: 1.4895 - accuracy: 0.9716
+Epoch 10/10
+1875/1875 - 6s - loss: 1.4886 - accuracy: 0.9725
+"""
+
 model.evaluate(x_test, y_test, batch_size=32, verbose=2)
+"""
+313/313 - 0s - loss: 1.4942 - accuracy: 0.9667
+"""
 
 print(model.summary())
+"""
+Model: "functional_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+input_1 (InputLayer)         [(None, 784)]             0
+_________________________________________________________________
+First_layer (Dense)          (None, 512)               401920
+_________________________________________________________________
+Second_layer (Dense)         (None, 256)               131328
+_________________________________________________________________
+dense (Dense)                (None, 10)                2570
+=================================================================
+Total params: 535,818
+Trainable params: 535,818
+Non-trainable params: 0
+_________________________________________________________________
+"""
